@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:green_monet/screens/registration/registor_screen_two.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
                 Center(
@@ -106,15 +107,15 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       ),
                       const Padding(
                         padding: EdgeInsets.only(top: 27),
-                        child: const Text(
+                        child: Text(
                           'Создайте парол',
-                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Color(0xFF1D2927)),
+                          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Color(0xFF1D2927)),
                         ),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text('Этот пароль нужен для разблокировки вашего кошелька Green Monet только \n на этом устройстве',
-                            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xFF4C5F5A)), textAlign: TextAlign.center),
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Color(0xFF4C5F5A)), textAlign: TextAlign.center),
                       ),
                     ],
                   ),
@@ -184,7 +185,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   children: [
                     const Text(
                       'Входить с помощью FaceID',
-                      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xFF4C5F5A)),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Color(0xFF4C5F5A)),
                     ),
                     const Spacer(),
                     CupertinoSwitch(
@@ -199,7 +200,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
-                      children: [
+                      children: const [
                         Text(
                           'Надежно сохраните этот пароль!',
                           style: TextStyle(color: Color(0xFFCC2E4A), fontWeight: FontWeight.w500, fontSize: 14),
@@ -223,19 +224,24 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 109,
                   decoration: BoxDecoration(shape: BoxShape.rectangle, color: const Color(0xFFFFEEF1), borderRadius: BorderRadius.circular(12)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Container(
-                  child: Center(
-                    child: Text(
-                      'Создать пароль',
-                      style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistorScreenTwo()));
+                  },
+                  child: Container(
+                    child: const Center(
+                      child: Text(
+                        'Создать пароль',
+                        style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
+                      ),
                     ),
+                    height: 50,
+                    width: 335,
+                    decoration: BoxDecoration(shape: BoxShape.rectangle, color: const Color(0xFFAEAEAE), borderRadius: BorderRadius.circular(30)),
                   ),
-                  height: 50,
-                  width: 335,
-                  decoration: BoxDecoration(shape: BoxShape.rectangle, color: Color(0xFFAEAEAE), borderRadius: BorderRadius.circular(30)),
                 )
               ],
             ),

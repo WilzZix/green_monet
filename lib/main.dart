@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_monet/screens/registration/registor_screen.dart';
+import 'package:green_monet/screens/registration/registor_screen_one.dart';
 
 void main() {
   runApp(const MyApp());
