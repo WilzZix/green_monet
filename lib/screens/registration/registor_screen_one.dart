@@ -92,8 +92,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               Container(
                                 height: 30,
                                 width: 30,
-                                decoration: new BoxDecoration(
-                                  color: const Color(0xFFE1F1ED),
+                                decoration: const BoxDecoration(
+                                  color: Color(0xFFE1F1ED),
                                   shape: BoxShape.circle,
                                 ),
                               ),

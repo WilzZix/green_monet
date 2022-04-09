@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:green_monet/screens/registration/registor_screen_third.dart';
 
 class RegistorScreenTwo extends StatefulWidget {
   RegistorScreenTwo({Key? key}) : super(key: key);
@@ -148,7 +149,7 @@ class _RegistorScreenTwoState extends State<RegistorScreenTwo> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistorScreenTwo()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => RegistorSCreenThrid()));
                         },
                         child: Container(
                           child: const Center(
